@@ -1,8 +1,11 @@
 To run the app:
 
 npm i
+
 npm run dev
+
 npx sequelize-cli db:seed:all
+
 
 
 API ENDPOINTS:
