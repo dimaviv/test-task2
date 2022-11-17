@@ -4,7 +4,7 @@ const userController = require('../controllers/userController')
 
 
 router.get('/', userController.getAllFollowing)
-router.get('/max-following', userController.getMaxFollowing)
+//router.get('/max-following', userController.getMaxFollowing)
 router.get('/not-following',userController.getNotFollowing)
 
 

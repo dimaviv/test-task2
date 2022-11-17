@@ -1,11 +1,14 @@
-const ApiError = require('../error/ApiError')
+
 const {User} = require('../models/models')
 
 class UserController{
     async getAllFollowing(req, res, next){
-        let {order_by, order_type} = req.query
 
-        let users = await User.findAndCountAll()
+        let users = await User.findAll({include: {
+            model:User,
+                as:'following',
+                required: true
+        }})
 
         return res.json(users)
     }
